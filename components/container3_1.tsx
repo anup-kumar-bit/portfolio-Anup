@@ -13,14 +13,14 @@ interface BigcontainerProps {
 
 export default function Container3({ data }: BigcontainerProps) {
     return (
-        <div className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
+        <div data-aos="zoom-in"  className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
         rounded-2xl flex flex-col items-center justify-evenly  w-full md:w-[50%]`} >
             <div className="w-full h-full p-2 flex flex-col items-center justify-center">
                 <div className="rounded-2xl bg-gradient-to-r from-[#1d1d1f] via-[#181817ef] to-[#080808] flex flex-col items-center w-[90%] p-2 justify-center">
                     {/* First Row - Social Icons */}
                     <div className=" flex justify-center gap-7 w-full h-20">
                         <Link 
-                            href="https://linkedin.com" 
+                            href="https://www.linkedin.com/in/anup-kumar-linkdin/" 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full w-20 h-w-20 flex items-center justify-center 
@@ -30,7 +30,7 @@ export default function Container3({ data }: BigcontainerProps) {
                             <FaLinkedin className="text-5xl text-gray-700 transition-all duration-300 hover:text-black" />
                         </Link>
                         <Link 
-                            href="https://github.com" 
+                            href="https://github.com/anup-kumar-bit" 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full w-20 h-w-20 flex items-center justify-center 
@@ -44,7 +44,7 @@ export default function Container3({ data }: BigcontainerProps) {
                     {/* Second Row - Social Icons */}
                     <div className=" flex justify-center gap-7 w-full mt-2 h-20">
                         <Link 
-                            href="https://instagram.com" 
+                            href="https://www.instagram.com/anupkashyap81?igsh=MWtkMGVkNjFnb2NvMw==" 
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-2 rounded-full w-20 h-w-20 flex items-center justify-center 
@@ -69,7 +69,7 @@ export default function Container3({ data }: BigcontainerProps) {
             <div className="grid grid-cols-3 grid-rows-1 gap-1 mb-5 w-full">
                 <div className="col-span-2 ">
                     <p className="text-sm ml-5 text-zinc-400">{data.text1}</p>
-                    <h2 className="text-2xl ml-5 mt-1">{data.text2}</h2>
+                    <h2 className="text-2xl ml-5 mt-1 text-white">{data.text2}</h2>
                 </div>
                 <div className="col-start-3 flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="42" viewBox="0 0 46 42" fill="none">

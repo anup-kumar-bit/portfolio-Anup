@@ -36,7 +36,7 @@ export default function Container3({ data }: BigcontainerProps) {
     }, [boxWidth]);
     
     return (
-        <div className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
+        <div data-aos="zoom-in"  className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
         rounded-2xl flex flex-col items-center justify-evenly`} style={{ width:Wid }}>
             <div className=" w-full  h-full p-7  flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center w-[90%]">

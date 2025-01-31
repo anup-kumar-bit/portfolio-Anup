@@ -1,6 +1,5 @@
 "use client"
 import React from "react";
-import { Rajdhani } from 'next/font/google';
 
 import {
   Navbar,
@@ -14,26 +13,15 @@ import {
   Button,
 } from "@heroui/react";
 
-const fontFamily = Rajdhani({
-  subsets: ['latin'],
-  weight: ['400'],
-});
-
-
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    { name: "Home", href: "/" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Works", href: "/works" },
+    { name: "Contact", href: "/#" },
   ];
 
   return (
@@ -41,31 +29,26 @@ export default function App() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
+          className=" sm:hidden text-white"
         />
-        <NavbarBrand>
+        <NavbarBrand >
           <p className="font-bold text-inherit text-white">ACME</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#" className={`text-gray-300 ${fontFamily.className}`}>
+          <Link color="foreground" href="/" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
             HOME
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
+          <Link color="foreground" href="/about" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
             ABOUT
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
-            SERVICE
-          </Link> 
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
+          <Link color="foreground" href="/works" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
             WORKS
           </Link>
         </NavbarItem>
@@ -77,28 +60,24 @@ export default function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link}  href="#" variant="flat" className="bg-gray-600 text-white">
-            Sign Up
+          <Button as={Link} href="#" variant="flat" className="bg-zinc-900 text-white">
+            Let&apos;s Talk
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="bg-w">
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} >
+          <NavbarMenuItem key={`${item.name}-${index}`}>
             <Link
-              className="w-full"
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              href="#"
+              className="w-full text-white"
+              href={item.href}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
     </Navbar>
   );
-}
-
+} 

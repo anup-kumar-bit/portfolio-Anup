@@ -4,16 +4,16 @@ import icon2 from "@/public/icon2.png"
 
 export default function Container3() {
     return (
-        <div className="w-full xl:w-[45%] h-[17rem] md:h-[16rem] lg:h-[17rem] xl:h-auto flex items-center justify-center">
+        <div data-aos="zoom-in"  className="w-full xl:w-[45%] h-[17rem] md:h-[16rem] lg:h-[17rem] xl:h-auto flex items-center justify-center">
             <div className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
         rounded-2xl flex flex-col justify-center px-5 h-full w-full md:w-5/6   xl:w-full`} >
                 <div className="col-start-3 flex  items-center h-20 xl:h-20 mb-5">
                     <Image src={icon2} alt="icon" />
                 </div>
-                <h2 className="text-4xl lg:text-6xl  ">Let&apos;s</h2>
+                <h2 className="text-4xl lg:text-6xl   text-white">Let&apos;s</h2>
                 <h2 className="text-4xl lg:text-6xl flex justify-between">
                     <span >
-                        <span className="mr-5">work</span>
+                        <span className="mr-5 text-white">work</span>
                         <span className="text-blue-500">together</span>
                     </span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="65" height="42" viewBox="0 0 46 42" fill="none">
