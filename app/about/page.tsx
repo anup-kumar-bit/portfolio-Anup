@@ -8,8 +8,8 @@ import Container3_1 from "@/components/container3_1";
 import Container3_2 from "@/components/container3_2";
 import myimage from "@/public/me.png"
 import sign from "@/public/sign.png"
-import star from "@/public/sign.png"
-import star2 from "@/public/star-2.png"
+import star from "@/public/star-2.png"
+
 
 
 export default function about() {
@@ -17,13 +17,13 @@ export default function about() {
     <div className="  p-2 flex items-center justify-center">
       <div className="w-[90%] xl:w-4/6 h-auto flex flex-col mb-10 pb-10">
 
-        <div className=" w-full h-auto lg:h-[23rem] flex justify-between flex-col lg:flex-row   items-center">
+        <div className="border-1 w-full h-auto lg:h-[23rem] flex justify-between flex-col lg:flex-row   items-center">
           <ContainerAbout images={myimage} />
           <div className="w-full lg:w-[65%] flex flex-col justify-between py-4">
             <h3 className="text-white text-4  xl xl:text-6xl flex justify-center items-center ">
               <Image src={star} alt="star" />
               SELF-SUMMARY
-              <Image src={star2} alt="star2" />
+              <Image src={star} alt="star2" />
             </h3>
             <ContainerAbout2 />
           </div>
