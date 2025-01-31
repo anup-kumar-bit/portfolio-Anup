@@ -1,11 +1,7 @@
 "use client"
-import Container2 from "../container2"
-import Container3 from "../container3";
-import Container3_1 from "../container3_1";
 import Container3_2 from "../container3_2";
 import Container3_3 from "../container3_3";
-// ---------images import---- 
-import works from "@/public/gthub1.png"
+
 
 
 

@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
 import icon2 from "@/public/resume-icon.png"
 
 

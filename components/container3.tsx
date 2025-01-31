@@ -1,4 +1,3 @@
-import Image, { StaticImageData } from "next/image"
 import { FaHtml5, FaCss3, FaReact, FaNodeJs, FaBootstrap, FaJava } from 'react-icons/fa';
 import { SiTailwindcss, SiExpress, SiMongodb, SiJquery } from 'react-icons/si';
 import { TbBrandNextjs } from 'react-icons/tb';
@@ -16,7 +15,7 @@ interface BigcontainerProps {
 }
 
 
-export default function container3({ data }: BigcontainerProps) {
+export default function Container3({ data }: BigcontainerProps) {
     const boxWidth = data.box_w ?? "50%"
     const [Wid, setWid] = useState("100%");
 
@@ -24,13 +23,18 @@ export default function container3({ data }: BigcontainerProps) {
         const updateWidth = () => {
             setWid(window.innerWidth > 768 ? boxWidth : "100%");
         };
-
-        updateWidth();
+    
+        updateWidth(); 
+    
         window.addEventListener("resize", updateWidth);
-    }, []);
-
-    console.log(data)
-    console.log(boxWidth)
+        
+        return () => {
+            if (typeof window !== "undefined") {
+                window.removeEventListener("resize", updateWidth);
+            }
+        };
+    }, [boxWidth]);
+    
     return (
         <div className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
         rounded-2xl flex flex-col items-center justify-evenly`} style={{ width:Wid }}>

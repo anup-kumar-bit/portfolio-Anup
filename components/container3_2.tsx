@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Image from "next/image"
 import icon2 from "@/public/icon2.png"
 
@@ -11,7 +10,7 @@ export default function Container3() {
                 <div className="col-start-3 flex  items-center h-20 xl:h-20 mb-5">
                     <Image src={icon2} alt="icon" />
                 </div>
-                <h2 className="text-4xl lg:text-6xl  ">Let's</h2>
+                <h2 className="text-4xl lg:text-6xl  ">Let&apos;s</h2>
                 <h2 className="text-4xl lg:text-6xl flex justify-between">
                     <span >
                         <span className="mr-5">work</span>

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Comp1 from "@/components/homepage-components/comp1";
 import Comp2 from "@/components/homepage-components/comp2";
 import Comp3 from "@/components/homepage-components/comp3";

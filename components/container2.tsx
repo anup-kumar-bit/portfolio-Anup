@@ -13,7 +13,7 @@ interface BigcontainerProps {
 }
 
 
-export default function container2({ data }: BigcontainerProps) {
+export default function     Container2({ data }: BigcontainerProps) {
     const boxWidth = data.box_w ?? "50%"
     const [Wid, setWid] = useState("100%");
 
@@ -21,10 +21,18 @@ export default function container2({ data }: BigcontainerProps) {
         const updateWidth = () => {
             setWid(window.innerWidth > 768 ? boxWidth : "100%");
         };
-
-        updateWidth();
+    
+        updateWidth(); // Run initially
+    
         window.addEventListener("resize", updateWidth);
-    }, []);
+        
+        return () => {
+            if (typeof window !== "undefined") {
+                window.removeEventListener("resize", updateWidth);
+            }
+        };
+    }, [boxWidth]); // Ensure `boxWidth` is stable
+    
     const imgSign = data.images;
 
     // console.log("mydata"+data.box_h)
