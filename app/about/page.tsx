@@ -31,7 +31,7 @@ export default function about() {
         </div>
 
         {/* ---------------------------------     */}
-        <div className=" w-full h-auto lg:h-[16rem]  flex justify-between mt-4 gap-6 flex-col sm:flex-row">
+        <div className=" w-full h-auto lg:h-[18rem]  flex justify-between mt-4 gap-6 flex-col sm:flex-row">
           <ContainerAbout3 data={{ text0: "Experience", text1: '5 months', text2: "Frontend with React & Next", text3: "- Kiran Foundation", text4: "4 months", text5: "Backend in Node js", text6: "- Acadmic work" }} />
           <ContainerAbout3 data={{ text0: "Education", text1: 'BCA', text2: "DSEU Ambedkar campus", text3: "2022-2025", text4: "Senior Secondary schooling", text5: "R.S.V roop nagar 3", text6: "2020-2022" }} />
         </div>

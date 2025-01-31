@@ -1,35 +1,39 @@
 "use client"
 import { HiMail } from "react-icons/hi";
-import { HiMapPin, HiPhone } from "react-icons/hi2";
+import { HiMapPin, HiPhone } from "react-icons/hi2" 
 import ContactInfo from "@/components/contact-component/contactInfo";
 import ContactInputs from "@/components/contact-component/contactinput";
+import ContactDown from "@/components/contact-component/contact-down";
 export default function Contact() {
     return (
-        <div className="bordesr-1 bsorder-r-red-600 text-white h-screen flex items-start justify-center bg-[#151515]">
-            <div className="bordser-2 bsorder-white p-2 w-5/6 h-4/5 flex">
+        <div className=" text-white h-auto xl:h-screen flex items-start justify-center bg-[#151515] p-1">
+            <div className="p-2 w-full xl:w-5/6 h-4/5 flex items-center flex-col xl:flex-row">
                 {/* ------------------------------------- 1nd component ---------------------------- */}
-                <div className="borsder-2 borsder-green-300 w-2/5  flex justify-center items-center flex-col gap-7">
+                <div className="bordser-1 w-[95%] sm:w-[63%] xl:w-2/5  flex justify-center items-center flex-col gap-7">
                     <ContactInfo
                         title="MAIL US"
-                        emails={["support@company.com", "info@company.com"]}
+                        emails={["anoopkumar0145@gmail.com", "ug41222019.dseu.ac.in"]}
                         icon={<HiMail className="h-8 w-9 text-gray-300" />}
                     />
                     <ContactInfo
                         title="OUR LOCATION"
-                        emails={["123 Business Street", "New York, NY 10001"]}
+                        emails={["Burari", "Delhi, D-110084"]}
                         icon={<HiMapPin className="h-8 w-8 text-gray-300" />}
                     />
 
                     <ContactInfo
                         title="CALL US"
-                        emails={["+1 (555) 123-4567", "+1 (555) 890-1234"]}
+                        emails={["77039XXXXX", "813040XXXX"]}
                         icon={<HiPhone className="h-8 w-8 text-gray-300" />}
                     />
+                    <h3 data-aos="zoom-in" className="">SOCIAL INFO</h3>
+                    <ContactDown/>
+
                 </div>
 
                 {/* ------------------------------------- 2nd component ---------------------------- */}
-                <div data-aos="zoom-in" className="border-s1 w-4/5 flex items-center justify-center">
-                   <ContactInputs/>
+                <div data-aos="zoom-in" className="w-full sm:w-4/5 h-auto  flex items-center justify-center my-10">
+                    <ContactInputs />
                 </div>
             </div>
         </div>

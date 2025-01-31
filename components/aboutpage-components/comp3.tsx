@@ -40,7 +40,7 @@ export default function ContainerAbout3({ data }: BigcontainerProps) {
             rounded-2xl flex flex-col items-center justify-evenly p-4`} 
             style={{ width: Wid }}
         >
-            <div className="w-full mb-5">
+            <div className="w-full mb-5 ml-8">
                 <h2 className="text-xl sm:text-2xl mt-1 text-white mb-5">{data.text0}</h2>
                 <p className="text-sm text-zinc-400">{data.text1}</p>
                 <h2 className="text-xl sm:text-2xl mt-1 text-white">{data.text2}</h2>
@@ -48,7 +48,7 @@ export default function ContainerAbout3({ data }: BigcontainerProps) {
             </div>
             
             
-            <div className="w-full mb-5">
+            <div className="w-full mb-5  ml-8">
                 <p className="text-sm text-zinc-400">{data.text4}</p>
                 <h2 className="text-xl sm:text-2xl mt-1 text-white">{data.text5}</h2>
                 <p className="text-sm text-zinc-400">{data.text6}</p>

@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-
+import { usePathname } from "next/navigation";
 import {
   Navbar,
   NavbarBrand,
@@ -15,9 +15,9 @@ import {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
 
   const menuItems = [
-    { name: "Home", href: "/" },
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Works", href: "/works" },
@@ -29,47 +29,53 @@ export default function App() {
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className=" sm:hidden text-white"
+          className="sm:hidden text-white"
         />
-        <NavbarBrand >
+        <NavbarBrand>
           <p className="font-bold text-inherit text-white">AK-Port</p>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="/" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
-            HOME
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/about" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
-            ABOUT
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/works" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
-            WORKS
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/contact" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
-            CONTACT
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item) => (
+          <NavbarItem key={item.href}>
+            <Link
+              color="foreground"
+              href={item.href}
+              className={`text-gray-300 font-[family-name:var(--font-geist-sans)] relative
+                hover:after:opacity-30 transition-all duration-200
+                ${pathname === item.href ? 'after:opacity-100' : 'after:opacity-0'}
+                after:content-[''] after:absolute after:left-0 after:-bottom-1
+                after:w-full after:h-[2px] after:bg-white after:transition-opacity`}
+            >
+              {item.name.toUpperCase()}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
+
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} href="/contact" variant="flat" className="bg-zinc-900 text-white">
+          <Button
+            as={Link}
+            href="/contact"
+            variant="flat"
+            className="bg-zinc-900 text-white"
+          >
             Let&apos;s Talk
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="bg-w">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item.name}-${index}`}>
+
+      <NavbarMenu className="bg-black">
+        {menuItems.map((item) => (
+          <NavbarMenuItem key={item.href}>
             <Link
-              className="w-full text-white"
+              className={`w-full text-white py-2 relative
+                hover:after:opacity-30 transition-all duration-200
+                ${pathname === item.href ? 'after:opacity-100' : 'after:opacity-0'}
+                after:content-[''] after:absolute after:left-0 after:-bottom-1
+                after:w-full after:h-[2px] after:bg-white after:transition-opacity`}
               href={item.href}
               size="lg"
             >
@@ -80,4 +86,4 @@ export default function App() {
       </NavbarMenu>
     </Navbar>
   );
-} 
+}
