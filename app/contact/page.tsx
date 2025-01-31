@@ -6,7 +6,7 @@ import ContactInputs from "@/components/contact-component/contactinput";
 import ContactDown from "@/components/contact-component/contact-down";
 export default function Contact() {
     return (
-        <div className=" text-white h-auto xl:h-screen flex items-start justify-center bg-[#151515] p-1">
+        <div className=" text-white h-auto lg:h-screen xl:h-screen flex items-start justify-center bg-[#151515] p-1">
             <div className="p-2 w-full xl:w-5/6 h-4/5 flex items-center flex-col xl:flex-row">
                 {/* ------------------------------------- 1nd component ---------------------------- */}
                 <div className="bordser-1 w-[95%] sm:w-[63%] xl:w-2/5  flex justify-center items-center flex-col gap-7">
@@ -32,7 +32,7 @@ export default function Contact() {
                 </div>
 
                 {/* ------------------------------------- 2nd component ---------------------------- */}
-                <div data-aos="zoom-in" className="w-full sm:w-4/5 h-auto  flex items-center justify-center my-10">
+                <div data-aos="zoom-in" className="w-full sm:w-4/5 h-auto lg:h-full  flex items-center justify-center my-10">
                     <ContactInputs />
                 </div>
             </div>

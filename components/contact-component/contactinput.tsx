@@ -1,6 +1,6 @@
 export default function ContactInputs() {
     return (
-        <div className="bg-gradient-to-r from-[#202020] via-[#1c1c1cc9] to-[#171717ef] w-[95%] sm:w-4/5 sm:h-3/4 rounded-[3rem] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.7)]">
+        <div className=" bg-gradient-to-r from-[#202020] via-[#1c1c1cc9] to-[#171717ef] w-[95%] sm:w-4/5  lg:h-full rounded-[3rem] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.7)]">
             <form className="h-full flex flex-col space-y-8 flex-1">
                 <input
                     type="text"

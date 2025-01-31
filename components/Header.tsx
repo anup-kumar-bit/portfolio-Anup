@@ -67,7 +67,7 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarMenu className="bg-black">
+      <NavbarMenu className="bg-zinc-900/95 backdrop-blur-sm mt-8 pt-5">
         {menuItems.map((item) => (
           <NavbarMenuItem key={item.href}>
             <Link
