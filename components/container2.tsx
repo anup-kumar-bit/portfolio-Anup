@@ -1,28 +1,37 @@
 import Image, { StaticImageData } from "next/image"
+import { useEffect, useState } from "react";
 
 interface BigcontainerProps {
-    data:{
+    data: {
         images: StaticImageData;
-        text1:string,
-        text2:string,
-        box_w?:string,
-        h?:number,
-        w?:number
+        text1: string,
+        text2: string,
+        box_w?: string,
+        h?: number,
+        w?: number
     }
 }
 
 
-export default function container2({data}: BigcontainerProps) {
-    const imgSign=data.images;
-    const boxWidth=data.box_w??"50%"
-    console.log(imgSign)
-    console.log(data)
-    console.log(boxWidth)
+export default function container2({ data }: BigcontainerProps) {
+    const boxWidth = data.box_w ?? "50%"
+    const [Wid, setWid] = useState("100%");
+
+    useEffect(() => {
+        const updateWidth = () => {
+            setWid(window.innerWidth > 768 ? boxWidth : "100%");
+        };
+
+        updateWidth();
+        window.addEventListener("resize", updateWidth);
+    }, []);
+    const imgSign = data.images;
+
     // console.log("mydata"+data.box_h)
     return (
         <div className={`bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111] shadow-[3px_6px_17px_2px_rgba(0,_0,_0,_0.7)] 
-        rounded-2xl flex flex-col items-center justify-evenly`} style={{ width: boxWidth }}>
-            <div className=" w-full  h-full p-7  flex items-center justify-center"><Image src={imgSign.src} alt="sign" width={data.w??imgSign.width} height={data.h??imgSign.height}  /></div>
+        rounded-2xl flex flex-col items-center justify-evenly `} style={{ width: Wid }}>
+            <div className=" w-full  h-full p-7  flex items-center justify-center"><Image src={imgSign.src} alt="sign" width={data.w ?? imgSign.width} height={data.h ?? imgSign.height} /></div>
             <div className="grid grid-cols-3 grid-rows-1 gap-1 mb-5 w-full">
                 <div className="col-span-2 ">
                     <p className="text-sm ml-5 text-zinc-400">{data.text1}</p>
