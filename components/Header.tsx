@@ -53,7 +53,7 @@ export default function App() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
+          <Link color="foreground" href="/contact" className={`text-gray-300 font-[family-name:var(--font-geist-sans)]`}>
             CONTACT
           </Link>
         </NavbarItem>

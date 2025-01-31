@@ -4,7 +4,8 @@ import gsap from "gsap";
 import Bigcontainer from "../container1";
 import Container2 from "../container2"
 // ---------images import---- 
-import myimage from "@/public/me1.png"
+// import myimage from "@/public/me1.png"
+import myimage from "@/public/m2.png"
 import sign from "@/public/sign.png"
 import works from "@/public/my-works.png"
 
