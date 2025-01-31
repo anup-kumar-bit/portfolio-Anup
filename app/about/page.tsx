@@ -6,7 +6,7 @@ import ContainerAbout3 from "@/components/aboutpage-components/comp3";
 import Container2 from "@/components/container2";
 import Container3_1 from "@/components/container3_1";
 import Container3_2 from "@/components/container3_2";
-import myimage from "@/public/me.png"
+import myimage from "@/public/me1.png"
 import sign from "@/public/sign.png"
 import star from "@/public/star-2.png"
 
