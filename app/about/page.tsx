@@ -17,10 +17,10 @@ export default function about() {
     <div className="  p-2 flex items-center justify-center">
       <div className="w-[90%] xl:w-4/6 h-auto flex flex-col mb-10 pb-10">
 
-        <div className=" w-full h-auto lg:h-[23rem] flex justify-between flex-col lg:flex-row   items-center">
+        <div className=" w-full h-auto lg:h-[23rem] flex justify-between flex-col lg:flex-row  items-center">
           <ContainerAbout images={myimage} />
-          <div className="w-full lg:w-[65%] flex flex-col justify-between py-4">
-            <h3 className="text-white text-4  xl xl:text-6xl flex justify-center items-center ">
+          <div className="w-full lg:w-[65%] flex flex-col justify-between py-4 ">
+            <h3 className="text-white text-4  xl xl:text-6xl flex justify-center items-center mb-5">
               <Image src={star} alt="star" />
               SELF-SUMMARY
               <Image src={star} alt="star2" />
