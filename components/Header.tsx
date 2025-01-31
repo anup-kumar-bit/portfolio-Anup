@@ -21,7 +21,7 @@ export default function App() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Works", href: "/works" },
-    { name: "Contact", href: "/#" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -60,7 +60,7 @@ export default function App() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button as={Link} href="#" variant="flat" className="bg-zinc-900 text-white">
+          <Button as={Link} href="/contact" variant="flat" className="bg-zinc-900 text-white">
             Let&apos;s Talk
           </Button>
         </NavbarItem>
