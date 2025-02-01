@@ -6,10 +6,10 @@ import ContactInputs from "@/components/contact-component/contactinput";
 import ContactDown from "@/components/contact-component/contact-down";
 export default function Contact() {
     return (
-        <div className=" text-white h-auto lg:h-screen xl:h-screen flex items-start justify-center bg-[#151515] p-1">
+        <div className="text-white h-auto xl:h-screen flex items-start justify-center bg-[#151515] p-1 pt-16">
             <div className="p-2 w-full xl:w-5/6 h-4/5 flex items-center flex-col xl:flex-row">
                 {/* ------------------------------------- 1nd component ---------------------------- */}
-                <div className="bordser-1 w-[95%] sm:w-[63%] xl:w-2/5  flex justify-center items-center flex-col gap-7">
+                <div className="w-[95%] sm:w-[63%] xl:w-2/5  flex justify-center items-center flex-col gap-7">
                     <ContactInfo
                         title="MAIL US"
                         emails={["anoopkumar0145@gmail.com", "ug41222019.dseu.ac.in"]}

@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 
 export default function ClientSide() {
   useEffect(() => {
-    AOS.init({ duration: 200, once: true ,delay:-10 });
+    AOS.init({ duration: 100, once: true ,delay:-10 });
   }, []);
 
   return null;

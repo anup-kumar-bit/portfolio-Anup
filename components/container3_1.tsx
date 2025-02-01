@@ -69,7 +69,7 @@ export default function Container3({ data }: BigcontainerProps) {
             <div className="grid grid-cols-3 grid-rows-1 gap-1 mb-5 w-full">
                 <div className="col-span-2 ">
                     <p className="text-sm ml-5 text-zinc-400">{data.text1}</p>
-                    <h2 className="text-2xl ml-5 mt-1 text-white">{data.text2}</h2>
+                    <h2 className="text-2xl ml-5 mt-1 text-zinc-300">{data.text2}</h2>
                 </div>
                 <div className="col-start-3 flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="46" height="42" viewBox="0 0 46 42" fill="none">

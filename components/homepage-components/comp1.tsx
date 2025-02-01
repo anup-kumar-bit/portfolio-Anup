@@ -19,7 +19,7 @@ export default function Comp1() {
         const marquee = marqueeRef.current;
         gsap.to(marquee, {
             x: "-50%",
-            duration: 10,
+            duration: 15,
             repeat: -1,
             ease: "linear",
         });
@@ -32,7 +32,7 @@ export default function Comp1() {
             <div data-aos="zoom-in"  className="w-[95%] md:w-[80%] h-[60%] xl:w-2/5 xl:h-[70%] rounded-2xl overflow-hidden py-3">
                 <div className="w-full overflow-hidden border-1 border-zinc-800 bg-gradient-to-r from-[#19191b] via-[#141413] to-[#111111]  py-3
                             rounded-xl mb-3">
-                    <div className="relative flex w-max whitespace-nowrap text-white text-lg h-5  " ref={marqueeRef}>
+                    <div className="relative flex w-max whitespace-nowrap text-zinc-300 text-lg h-5  " ref={marqueeRef}>
                         <p className="text-sm">I am a web developer with MERN stack expertise, specializing in scalable web applications, performance optimization, and modern frameworks like Next.js and Astro. Passionate about clean code, UI/UX, and seamless user experiences.</p>
                         <p className="text-sm">I am a web developer with MERN stack expertise, specializing in scalable web applications, performance optimization, and modern frameworks like Next.js and Astro. Passionate about clean code, UI/UX, and seamless user experiences.</p>
                     </div>
