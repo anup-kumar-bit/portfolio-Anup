@@ -39,7 +39,7 @@ export default function Comp1() {
                 </div>
                 <div data-aos="zoom-in"  className="flex flex-col md:flex-row mt-5 h-5/6 gap-4 p-1 ">
                     <Container2 data={{ images: sign, text1: "MORE ABOUT ME", text2: "Credentials", h: 169, w: 163 }} />
-                    <Container2 data={{ images: works, text1: "SHOWCASE", text2: "PROJECT" }} />
+                    <Container2 data={{ images: works, text1: "SHOWCASE", text2: "PROJECT" ,link:"/works"}} />
                 </div>
             </div>
         </div>

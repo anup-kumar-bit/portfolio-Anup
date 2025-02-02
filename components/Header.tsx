@@ -9,10 +9,9 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
-  Link,
   Button,
 } from "@heroui/react";
-
+import Link from "next/link";
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname();
@@ -77,7 +76,6 @@ export default function App() {
                 after:content-[''] after:absolute after:left-0 after:-bottom-1
                 after:w-full after:h-[2px] after:bg-white after:transition-opacity`}
               href={item.href}
-              size="lg"
             >
               {item.name}
             </Link>

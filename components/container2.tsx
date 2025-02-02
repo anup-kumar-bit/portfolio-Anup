@@ -39,7 +39,7 @@ export default function Container2({ data }: BigcontainerProps) {
         >
             <a
                 href={data.link}
-                target="_blank"
+                target={(data.link==="/works")?"_self":"_blank"}
                 rel="noopener noreferrer"
                 className="w-full h-full p-7 flex items-center justify-center"
             >
