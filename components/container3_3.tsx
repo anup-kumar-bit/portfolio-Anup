@@ -1,7 +1,5 @@
 import Image from "next/image"
-import icon2 from "@/public/resume-icon.png"
 import iconR from "@/public/resumeGIF.gif"
-import icon3 from "@/public/re2.png"
 import icon4 from "@/public/uiGif.gif"
 
 
