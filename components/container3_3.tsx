@@ -13,7 +13,7 @@ export default function container2() {
                     <Image src={iconR} alt="sign" width={280}  className="rounded-3xl transition-all hover:bg-[#e4e4e4]  border-5 border-zinc-800" />
                 </a>
             </div>
-            <div className=" w-full  h-full p-7 hidden sm:flex items-center justify-center ">
+            <div className=" w-full  h-full p-7  items-center justify-center ">
                 <Image src={icon4} alt="developer" width={280} className="rounded-3xl transition-all cursor-pointer border-5 border-zinc-800" />
             </div>
         </div>

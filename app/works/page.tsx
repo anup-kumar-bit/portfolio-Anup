@@ -13,7 +13,7 @@ import Container2 from "@/components/container2";
 
 export default function works() {
   return (
-    <div className="flex items-start justify-center h-auto  xl:h-auto p-4 ">
+    <div className="flex items-start justify-center h-full lg:h-auto p-4">
       <div className=" w-[100%] xl:w-4/6 h-auto mb-10 pb-10 flex p-3 flex-col sm:flex-row">
         <div className=" text-white w-full sm:w-2/4 h-full p-1 flex ">
           <div className="flex w-full flex-col items-center justify-center h-full gap-5">
