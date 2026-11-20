@@ -151,6 +151,23 @@ export type Project = {
 // School Aura ERP, ACTPAL, GymFreak, TaskFlow and Notes & Bill Generator if you can share them.
 export const projects: Project[] = [
   {
+    slug: "cinzel-dynamics",
+    title: "Cinzel Dynamics",
+    subtitle: "Small side initiative",
+    category: "Professional",
+    description:
+      "Website for Cinzel Dynamics, a small initiative I run on the side for web, mobile and backend work. It lists services, past work and a blog, with a contact form for enquiries.",
+    highlights: [
+      "Service pages for backend & APIs, web apps, mobile apps, AI automation and SEO",
+      "Contact form for project enquiries",
+      "Lighthouse scores of 98 / 100 / 100 / 100",
+    ],
+    tech: ["Next.js"],
+    // TODO(owner): add a screenshot (e.g. /public/projects/cinzel.png) and confirm the full tech stack.
+    live: "https://www.cinzeldynamics.com/",
+    featured: true,
+  },
+  {
     slug: "school-aura",
     title: "School Aura ERP",
     subtitle: "Insoftlink · School management",
@@ -180,22 +197,6 @@ export const projects: Project[] = [
     tech: ["FastAPI", "MySQL", "Async jobs", "Next.js"],
     live: "https://actpal.com",
     featured: true,
-  },
-  {
-    slug: "cinzel-dynamics",
-    title: "Cinzel Dynamics",
-    subtitle: "Small side initiative",
-    category: "Professional",
-    description:
-      "Website for Cinzel Dynamics, a small initiative I run on the side for web, mobile and backend work. It lists services, past work and a blog, with a contact form for enquiries.",
-    highlights: [
-      "Service pages for backend & APIs, web apps, mobile apps, AI automation and SEO",
-      "Contact form for project enquiries",
-      "Lighthouse scores of 98 / 100 / 100 / 100",
-    ],
-    tech: ["Next.js"],
-    // TODO(owner): add a screenshot (e.g. /public/projects/cinzel.png) and confirm the full tech stack.
-    live: "https://www.cinzeldynamics.com/",
   },
   {
     slug: "essar",
