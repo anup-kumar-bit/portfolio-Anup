@@ -1,28 +1,48 @@
-import { heroui } from "@heroui/react";
+import type { Config } from "tailwindcss";
 
-const config = {
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./data/**/*.{js,ts}",
   ],
   theme: {
     extend: {
-      transformStyle: {
-        "preserve-3d": "preserve-3d",
+      colors: {
+        ink: "#0d0d0d",
+        panel: "#151515",
+        panel2: "#1c1c1c",
+        line: "#2a2a2a",
+        bone: "#f3efe6",
+        mute: "#9c978e", // 5.9:1 on panel2, 6.7:1 on ink — WCAG AA for 12px labels
+        lime: "#c8f53c",
+        sun: "#ffd23f",
+        rose: "#ff6fb1",
       },
-      perspective: {
-        1000: "1000px",
+      fontFamily: {
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
-      translate: {
-        "z-10": "translateZ(10px)",
-        "z-20": "translateZ(20px)",
+      maxWidth: {
+        "8xl": "88rem",
+        "9xl": "96rem",
+      },
+      keyframes: {
+        marquee: { to: { transform: "translateX(-50%)" } },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-7px)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 40s linear infinite",
+        float: "float 5s ease-in-out infinite",
       },
     },
   },
-  darkMode: "class",
-  plugins: [heroui()],
+  plugins: [],
 };
 
 export default config;

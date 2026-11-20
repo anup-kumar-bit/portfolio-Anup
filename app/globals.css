@@ -2,22 +2,145 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} 
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-ink text-bone font-sans;
+  overflow-x: hidden;
+}
 
+::selection {
+  @apply bg-lime text-ink;
+}
+
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-lime;
+}
+
+@layer components {
+  /* Page container — same width and gutter as the Hero */
+  .wrap {
+    @apply mx-auto w-full max-w-9xl px-6;
+  }
+  /* Standard page section: container + vertical rhythm */
+  .section {
+    @apply wrap pt-20 md:pt-28;
+  }
+
+  /* Headings */
+  .h-page {
+    @apply font-display text-5xl font-bold leading-[0.92] tracking-[-0.04em] text-bone sm:text-6xl lg:text-7xl;
+  }
+  .h-section {
+    @apply font-display text-4xl font-bold leading-[0.95] tracking-[-0.03em] text-bone sm:text-5xl md:text-6xl;
+  }
+  .h-card {
+    @apply font-display text-xl font-bold leading-tight tracking-tight sm:text-2xl;
+  }
+  .lede {
+    @apply max-w-2xl text-lg leading-relaxed text-bone/70 md:text-xl;
+  }
+
+  /* Small monospace label, e.g. "[ 01 ] SERVICES" */
+  .label {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-mute;
+  }
+  /* Same label for use on solid colour tiles */
+  .label-ink {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em] text-ink/75;
+  }
+
+  /* Inline text link with a quiet underline */
+  .link {
+    @apply underline decoration-bone/30 underline-offset-4 transition-colors hover:decoration-current;
+  }
+
+  /* Base tile: flat panel with a hard offset shadow on hover (no glow, no blur) */
+  .tile {
+    @apply relative rounded-2xl border border-line bg-panel transition-[transform,box-shadow,border-color] duration-200 ease-out;
+  }
+  .tile-hover:hover {
+    @apply -translate-x-1 -translate-y-1 border-bone/40;
+    box-shadow: 6px 6px 0 0 var(--accent, #f3efe6);
+  }
+
+  /* Solid colour tiles */
+  .tile-lime { @apply bg-lime text-ink border-lime; }
+  .tile-sun  { @apply bg-sun text-ink border-sun; }
+  .tile-rose { @apply bg-rose text-ink border-rose; }
+  .tile-bone { @apply bg-bone text-ink border-bone; }
+
+  .tag {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-panel2 px-3 py-1 font-mono text-[11px] text-bone/80;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full border-2 px-6 py-3 text-sm font-semibold transition-[transform,box-shadow] duration-150;
+  }
+  .btn-lime {
+    @apply btn border-ink bg-lime text-ink;
+    box-shadow: 4px 4px 0 0 #f3efe6;
+  }
+  .btn-lime:hover { @apply -translate-x-0.5 -translate-y-0.5; box-shadow: 6px 6px 0 0 #f3efe6; }
+  .btn-lime:active { @apply translate-x-1 translate-y-1; box-shadow: 0 0 0 0 #f3efe6; }
+
+  .btn-outline {
+    @apply btn border-bone/25 text-bone hover:border-bone hover:bg-bone hover:text-ink;
+  }
+
+  /* Buttons for use on solid colour tiles */
+  .btn-ink {
+    @apply btn border-ink bg-ink text-bone;
+    box-shadow: 4px 4px 0 0 #f3efe6;
+  }
+  .btn-ink:hover { @apply -translate-x-0.5 -translate-y-0.5; box-shadow: 6px 6px 0 0 #f3efe6; }
+  .btn-ink:active { @apply translate-x-1 translate-y-1; box-shadow: 0 0 0 0 #f3efe6; }
+
+  .btn-outline-ink {
+    @apply btn border-ink text-ink hover:bg-ink hover:text-bone;
+  }
+
+  /* Hand-drawn style marker highlight behind a word */
+  .marker {
+    /* Full-height highlight: the text inside is dark ink, so it must sit fully on the colour */
+    background: var(--mk, #c8f53c);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    @apply px-1.5 py-0.5 rounded-[3px];
+  }
+}
+
+/* Dotted texture used inside colour tiles */
+.dots {
+  background-image: radial-gradient(rgba(13, 13, 13, 0.22) 1.2px, transparent 1.2px);
+  background-size: 14px 14px;
+}
+.dots-light {
+  background-image: radial-gradient(rgba(243, 239, 230, 0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(13, 13, 13, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(13, 13, 13, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.stripes {
+  background-image: repeating-linear-gradient(-45deg, rgba(13, 13, 13, 0.14) 0 2px, transparent 2px 12px);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
