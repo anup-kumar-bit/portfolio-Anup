@@ -16,7 +16,7 @@ export const metadata = pageMetadata({
 const facts = [
   { k: "Role", v: "Full Stack Developer" },
   { k: "Company", v: profile.employer },
-  { k: "Side practice", v: profile.company.name },
+  { k: "Side initiative", v: profile.company.name },
   { k: "Experience", v: `${yearsOfExperience} years` },
   { k: "Location", v: "Delhi, India" },
   { k: "Education", v: "BCA · DSEU, 2025" },

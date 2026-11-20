@@ -92,12 +92,12 @@ export default function Hero() {
         <div data-aos="fade-up" className="tile p-8 md:col-span-3 flex flex-col justify-between gap-8">
           <p className="text-lg text-bone/80 leading-relaxed">
             Hi, I&apos;m <span className="text-bone font-semibold">Anup Kumar</span> — a full stack developer at{" "}
-            <span className="marker text-ink font-medium">Insoftlink Software</span> in Delhi, and founder of{" "}
+            <span className="marker text-ink font-medium">Insoftlink Software</span> in Delhi. I design FastAPI backends, ship Next.js
+            web apps and build React Native mobile apps for real clients. On the side, I also run{" "}
             <a href={profile.company.url} target="_blank" rel="noopener noreferrer" className="text-bone font-semibold underline decoration-rose decoration-2 underline-offset-4 hover:text-rose transition-colors">
               {profile.company.name}
             </a>
-            . I design FastAPI backends, ship Next.js
-            web apps and build React Native mobile apps for real clients.
+            , a small initiative of mine.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Link href="/works" className="btn-lime">

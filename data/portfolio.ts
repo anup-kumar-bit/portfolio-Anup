@@ -42,10 +42,10 @@ export const profile = {
   tagline: "Python (FastAPI) · Next.js · React Native",
   /** Current employer */
   employer: "Insoftlink Software",
-  /** Small startup practice Anup created */
+  /** Small side initiative Anup runs — keep the wording modest (not "founder") */
   company: { name: "Cinzel Dynamics", url: "https://www.cinzeldynamics.com/" },
   shortBio: `Full stack developer with ${yearsOfExperience} years of experience building production web and mobile apps — from FastAPI backends and JWT auth to responsive Next.js and React Native frontends.`,
-  summary: `Full stack developer with ${yearsOfExperience} years of experience building scalable web applications across frontend and backend. Proficient in Next.js, React, Python (FastAPI) and Node.js. Experienced in end-to-end delivery of production systems — from REST API design and JWT-based authentication to responsive, accessible UIs. Currently deepening expertise in Python/FastAPI backends paired with Next.js frontends. Also created Cinzel Dynamics, a small startup practice.`,
+  summary: `Full stack developer with ${yearsOfExperience} years of experience building scalable web applications across frontend and backend. Proficient in Next.js, React, Python (FastAPI) and Node.js. Experienced in end-to-end delivery of production systems — from REST API design and JWT-based authentication to responsive, accessible UIs. Currently deepening expertise in Python/FastAPI backends paired with Next.js frontends. On the side, I also run Cinzel Dynamics, a small initiative.`,
 };
 
 /** Companies and products shown in the "Worked on" strip under the hero. */
@@ -79,13 +79,13 @@ export const experience: Experience[] = [
   },
   {
     company: "Cinzel Dynamics",
-    role: "Creator · Small startup practice",
+    role: "Side initiative",
     stack: "Backend & APIs · Web · Mobile · AI automation",
     // TODO(owner): add the start month/year, e.g. "Jun 2025 – Present".
     period: "Present",
     location: "Remote",
     link: "https://www.cinzeldynamics.com/",
-    points: ["Created and built a small practice delivering web, mobile and backend projects."],
+    points: ["A small initiative I run alongside my job, taking on web, mobile and backend projects."],
   },
   {
     company: "Kiran Foundation",
@@ -151,23 +151,6 @@ export type Project = {
 // School Aura ERP, ACTPAL, GymFreak, TaskFlow and Notes & Bill Generator if you can share them.
 export const projects: Project[] = [
   {
-    slug: "cinzel-dynamics",
-    title: "Cinzel Dynamics",
-    subtitle: "My agency website",
-    category: "Professional",
-    description:
-      "Website for Cinzel Dynamics, the small app, web and backend development practice I run. It presents services, portfolio, products and a blog, with a contact form for consultation requests.",
-    highlights: [
-      "Service pages for backend & APIs, web apps, mobile apps, AI automation and SEO",
-      "Lead capture through a contact form and \"Book a Free Consultation\" calls to action",
-      "Lighthouse scores of 98 / 100 / 100 / 100",
-    ],
-    tech: ["Next.js"],
-    // TODO(owner): add a screenshot (e.g. /public/projects/cinzel.png) and confirm the full tech stack.
-    live: "https://www.cinzeldynamics.com/",
-    featured: true,
-  },
-  {
     slug: "school-aura",
     title: "School Aura ERP",
     subtitle: "Insoftlink · School management",
@@ -197,6 +180,22 @@ export const projects: Project[] = [
     tech: ["FastAPI", "MySQL", "Async jobs", "Next.js"],
     live: "https://actpal.com",
     featured: true,
+  },
+  {
+    slug: "cinzel-dynamics",
+    title: "Cinzel Dynamics",
+    subtitle: "Small side initiative",
+    category: "Professional",
+    description:
+      "Website for Cinzel Dynamics, a small initiative I run on the side for web, mobile and backend work. It lists services, past work and a blog, with a contact form for enquiries.",
+    highlights: [
+      "Service pages for backend & APIs, web apps, mobile apps, AI automation and SEO",
+      "Contact form for project enquiries",
+      "Lighthouse scores of 98 / 100 / 100 / 100",
+    ],
+    tech: ["Next.js"],
+    // TODO(owner): add a screenshot (e.g. /public/projects/cinzel.png) and confirm the full tech stack.
+    live: "https://www.cinzeldynamics.com/",
   },
   {
     slug: "essar",
